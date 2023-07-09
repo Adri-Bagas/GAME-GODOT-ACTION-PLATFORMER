@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://uej34k70aram"]
+
+[ext_resource type="Texture2D" uid="uid://b0s3yfw636osq" path="res://Rocky Roads/Objects/bounce pad.png" id="1_30yoi"]
+[ext_resource type="Script" path="res://OBJECTS/bounce_pad.gd" id="1_hgdkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boooh"]
+size = Vector2(18, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bscry"]
+atlas = ExtResource("1_30yoi")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88wha"]
+atlas = ExtResource("1_30yoi")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05ocf"]
+atlas = ExtResource("1_30yoi")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl8t5"]
+atlas = ExtResource("1_30yoi")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pibiy"]
+atlas = ExtResource("1_30yoi")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8dor3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bscry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88wha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05ocf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl8t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pibiy")
+}],
+"loop": false,
+"name": &"bounce",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwpfd"]
+size = Vector2(12, 3)
+
+[node name="BouncePad" type="RigidBody2D"]
+script = ExtResource("1_hgdkl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_boooh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8dor3")
+animation = &"bounce"
+frame = 4
+frame_progress = 1.0
+
+[node name="JumpArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpArea"]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_xwpfd")
+
+[connection signal="body_entered" from="JumpArea" to="." method="_on_jump_area_body_entered"]

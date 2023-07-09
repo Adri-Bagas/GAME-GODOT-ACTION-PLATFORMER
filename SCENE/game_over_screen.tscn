@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsn3j3sr82e6k"]
+
+[ext_resource type="FontFile" uid="uid://ban0ciqjhcy71" path="res://FONT/PerfectDOSWin.ttf" id="1_iva6q"]
+[ext_resource type="Script" path="res://RetryButton.gd" id="2_gfvwe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pcqv3"]
+font = ExtResource("1_iva6q")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_p722e"]
+font = ExtResource("1_iva6q")
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.5
+offset_top = -25.5
+offset_right = 121.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_pcqv3")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -142.5
+offset_top = -22.0
+offset_right = 142.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "No, YOU cannot comeback for now"
+label_settings = SubResource("LabelSettings_p722e")
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.496
+anchor_top = 0.622
+anchor_right = 0.496
+anchor_bottom = 0.622
+offset_left = -47.392
+offset_top = -16.056
+offset_right = 45.608
+offset_bottom = 14.944
+text = "Retry"
+script = ExtResource("2_gfvwe")
+
+[connection signal="pressed" from="RetryButton" to="RetryButton" method="_on_pressed"]

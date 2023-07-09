@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1fltgssnvo6l"]
+
+[ext_resource type="Texture2D" uid="uid://dp43ie4qsed2u" path="res://Rocky Roads/Objects/button.png" id="1_2qden"]
+[ext_resource type="Script" path="res://OBJECTS/button.gd" id="1_x71mt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r1vi"]
+size = Vector2(16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfqpw"]
+atlas = ExtResource("1_2qden")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsgl7"]
+atlas = ExtResource("1_2qden")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0ofc"]
+atlas = ExtResource("1_2qden")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rgk0"]
+atlas = ExtResource("1_2qden")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_607k0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfqpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsgl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0ofc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rgk0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Button" type="Area2D"]
+script = ExtResource("1_x71mt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_7r1vi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_607k0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

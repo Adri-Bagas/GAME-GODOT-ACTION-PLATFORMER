@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj3fga5blwnkh"]
+
+[ext_resource type="Script" path="res://ENEMIES/ice_spikes.gd" id="1_2emv4"]
+[ext_resource type="Texture2D" uid="uid://dl1a8e3v3xqp4" path="res://Rocky Roads/Enemies/ice_spikes.png" id="1_a0ywy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6irk3"]
+size = Vector2(27, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4q1p"]
+size = Vector2(25, 2)
+
+[node name="IceSpikes" type="RigidBody2D"]
+script = ExtResource("1_2emv4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("RectangleShape2D_6irk3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a0ywy")
+hframes = 4
+frame = 1
+
+[node name="DeathArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_e4q1p")
+
+[connection signal="body_entered" from="DeathArea" to="." method="_on_death_area_body_entered"]

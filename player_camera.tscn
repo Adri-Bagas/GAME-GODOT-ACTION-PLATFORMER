@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cphwqbcs7bsca"]
+
+[node name="PlayerCamera" type="Camera2D"]
+process_callback = 0
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 0.48
+drag_vertical_offset = 0.53

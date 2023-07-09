@@ -1,0 +1,148 @@
+[gd_scene load_steps=19 format=3 uid="uid://c5lamak37nt5l"]
+
+[ext_resource type="Script" path="res://ENEMIES/polar_bear.gd" id="1_ie3sk"]
+[ext_resource type="Texture2D" uid="uid://y8lgaak67oua" path="res://Rocky Roads/Enemies/bear_polar.png" id="2_83ti0"]
+[ext_resource type="Texture2D" uid="uid://cbcs4wdt1ky2e" path="res://Rocky Roads/FX/bomb_explosion.png" id="3_d3j2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3rjj"]
+size = Vector2(20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37yi4"]
+atlas = ExtResource("2_83ti0")
+region = Rect2(0, 34, 32, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ln8f"]
+atlas = ExtResource("2_83ti0")
+region = Rect2(32, 34, 32, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwwdu"]
+atlas = ExtResource("2_83ti0")
+region = Rect2(64, 34, 32, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beq5k"]
+atlas = ExtResource("2_83ti0")
+region = Rect2(96, 34, 32, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tedpl"]
+atlas = ExtResource("3_d3j2h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mox7e"]
+atlas = ExtResource("3_d3j2h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndbsv"]
+atlas = ExtResource("3_d3j2h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgood"]
+atlas = ExtResource("3_d3j2h")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6echd"]
+atlas = ExtResource("3_d3j2h")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htgni"]
+atlas = ExtResource("2_83ti0")
+region = Rect2(0, 4, 32, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfvxg"]
+atlas = ExtResource("2_83ti0")
+region = Rect2(32, 4, 32, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pm221"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37yi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ln8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwwdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beq5k")
+}],
+"loop": true,
+"name": &"attacking",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tedpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mox7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndbsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgood")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6echd")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"die",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htgni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfvxg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r6fk"]
+size = Vector2(134.625, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyskt"]
+size = Vector2(25, 16)
+
+[node name="PolarBear" type="CharacterBody2D" groups=["ENEMY"]]
+script = ExtResource("1_ie3sk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_a3rjj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_pm221")
+animation = &"die"
+autoplay = "idle"
+frame = 5
+frame_progress = 1.0
+
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+position = Vector2(67.3125, -1)
+shape = SubResource("RectangleShape2D_1r6fk")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[node name="Hitbox" type="Area2D" parent="." groups=["ENEMY"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_cyskt")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
+[connection signal="body_exited" from="DetectArea" to="." method="_on_detect_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
