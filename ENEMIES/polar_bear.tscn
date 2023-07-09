@@ -121,10 +121,9 @@ shape = SubResource("RectangleShape2D_a3rjj")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_pm221")
-animation = &"die"
+animation = &"idle"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
+frame_progress = 0.375451
 
 [node name="DetectArea" type="Area2D" parent="."]
 

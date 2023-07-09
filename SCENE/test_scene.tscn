@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://ble7c7om7s76b"]
+[gd_scene load_steps=11 format=3 uid="uid://ble7c7om7s76b"]
 
 [ext_resource type="PackedScene" uid="uid://dmadcl8w7j7ws" path="res://CHARACTER/player.tscn" id="1_dvf51"]
+[ext_resource type="PackedScene" uid="uid://bd5h7dgh8wa2a" path="res://BACKGROUND/background.tscn" id="1_nye7u"]
 [ext_resource type="Texture2D" uid="uid://bldjmmsejxn7c" path="res://Rocky Roads/Tilesets/tileset_snow_1.png" id="2_2uppt"]
 [ext_resource type="PackedScene" uid="uid://cphwqbcs7bsca" path="res://player_camera.tscn" id="2_s4e42"]
 [ext_resource type="PackedScene" uid="uid://bj3fga5blwnkh" path="res://ENEMIES/ice_spikes.tscn" id="3_catm1"]
 [ext_resource type="PackedScene" uid="uid://c5lamak37nt5l" path="res://ENEMIES/polar_bear.tscn" id="4_lf60u"]
 [ext_resource type="PackedScene" uid="uid://uej34k70aram" path="res://OBJECTS/bounce_pad.tscn" id="5_w17vx"]
+[ext_resource type="PackedScene" uid="uid://bbg1sckijkkj4" path="res://coin.tscn" id="9_s3fxt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fa3x6"]
 texture = ExtResource("2_2uppt")
@@ -136,6 +138,8 @@ sources/2 = SubResource("TileSetAtlasSource_fa3x6")
 
 [node name="TestScene" type="Node2D"]
 
+[node name="Background" parent="." instance=ExtResource("1_nye7u")]
+
 [node name="Player" parent="." instance=ExtResource("1_dvf51")]
 position = Vector2(357, 46)
 
@@ -154,3 +158,12 @@ position = Vector2(-42, 37)
 
 [node name="BouncePad" parent="." instance=ExtResource("5_w17vx")]
 position = Vector2(248, 58)
+
+[node name="Coin" parent="." instance=ExtResource("9_s3fxt")]
+position = Vector2(248, 17)
+
+[node name="Coin2" parent="." instance=ExtResource("9_s3fxt")]
+position = Vector2(247, -4)
+
+[node name="Coin3" parent="." instance=ExtResource("9_s3fxt")]
+position = Vector2(253, -26)

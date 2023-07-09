@@ -1,0 +1,536 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd5h7dgh8wa2a"]
+
+[ext_resource type="Texture2D" uid="uid://jj086c3kib1t" path="res://Rocky Roads/Backgrounds/mountains_a.png" id="1_0qt1p"]
+[ext_resource type="Texture2D" uid="uid://bq7u1pf5gkv1r" path="res://Rocky Roads/Deco/clouds.png" id="1_ycy6u"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.6
+scroll_limit_end = Vector2(10000, 0)
+
+[node name="SKY" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0.6)
+
+[node name="ColorRect" type="ColorRect" parent="SKY"]
+offset_left = -2100.0
+offset_top = -967.0
+offset_right = 6317.0
+offset_bottom = 40.0
+color = Color(0.164706, 0.768627, 1, 1)
+
+[node name="Cloud1" type="Sprite2D" parent="SKY"]
+position = Vector2(378.667, -131.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud2" type="Sprite2D" parent="SKY"]
+position = Vector2(185.333, -170)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud3" type="Sprite2D" parent="SKY"]
+position = Vector2(612, -143.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud4" type="Sprite2D" parent="SKY"]
+position = Vector2(3.6665, -98.3335)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud5" type="Sprite2D" parent="SKY"]
+position = Vector2(-109.667, -170)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud6" type="Sprite2D" parent="SKY"]
+position = Vector2(1330.67, -177)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud7" type="Sprite2D" parent="SKY"]
+position = Vector2(1137.33, -215.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud8" type="Sprite2D" parent="SKY"]
+position = Vector2(1564, -188.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud9" type="Sprite2D" parent="SKY"]
+position = Vector2(955.666, -143.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud10" type="Sprite2D" parent="SKY"]
+position = Vector2(842.333, -215.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud11" type="Sprite2D" parent="SKY"]
+position = Vector2(-1459.67, -135)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud12" type="Sprite2D" parent="SKY"]
+position = Vector2(-1653, -173.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud13" type="Sprite2D" parent="SKY"]
+position = Vector2(-1226.33, -146.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud14" type="Sprite2D" parent="SKY"]
+position = Vector2(-1834.67, -101.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud15" type="Sprite2D" parent="SKY"]
+position = Vector2(-1948, -173.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud16" type="Sprite2D" parent="SKY"]
+position = Vector2(-507.667, -180.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud17" type="Sprite2D" parent="SKY"]
+position = Vector2(-701.001, -218.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud18" type="Sprite2D" parent="SKY"]
+position = Vector2(-274.334, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud19" type="Sprite2D" parent="SKY"]
+position = Vector2(-882.668, -147)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud20" type="Sprite2D" parent="SKY"]
+position = Vector2(-996, -218.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud21" type="Sprite2D" parent="SKY"]
+position = Vector2(4532.33, -255.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud22" type="Sprite2D" parent="SKY"]
+position = Vector2(2230.33, -175)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud23" type="Sprite2D" parent="SKY"]
+position = Vector2(2037, -213.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud24" type="Sprite2D" parent="SKY"]
+position = Vector2(2463.67, -186.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud25" type="Sprite2D" parent="SKY"]
+position = Vector2(1855.33, -141.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud26" type="Sprite2D" parent="SKY"]
+position = Vector2(1742, -213.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud27" type="Sprite2D" parent="SKY"]
+position = Vector2(3182.33, -220.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud28" type="Sprite2D" parent="SKY"]
+position = Vector2(2989, -258.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud29" type="Sprite2D" parent="SKY"]
+position = Vector2(3415.67, -232)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud30" type="Sprite2D" parent="SKY"]
+position = Vector2(2807.33, -187)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud31" type="Sprite2D" parent="SKY"]
+position = Vector2(2694, -258.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud32" type="Sprite2D" parent="SKY"]
+position = Vector2(4532.33, -255.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud33" type="Sprite2D" parent="SKY"]
+position = Vector2(2230.33, -175)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud34" type="Sprite2D" parent="SKY"]
+position = Vector2(2037, -213.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud35" type="Sprite2D" parent="SKY"]
+position = Vector2(2463.67, -186.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud36" type="Sprite2D" parent="SKY"]
+position = Vector2(1855.33, -141.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud37" type="Sprite2D" parent="SKY"]
+position = Vector2(1742, -213.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud38" type="Sprite2D" parent="SKY"]
+position = Vector2(3182.33, -220.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud39" type="Sprite2D" parent="SKY"]
+position = Vector2(2989, -258.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud40" type="Sprite2D" parent="SKY"]
+position = Vector2(3415.67, -232)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud41" type="Sprite2D" parent="SKY"]
+position = Vector2(2807.33, -187)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud42" type="Sprite2D" parent="SKY"]
+position = Vector2(2694, -258.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud43" type="Sprite2D" parent="SKY"]
+position = Vector2(4745.67, -228.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud44" type="Sprite2D" parent="SKY"]
+position = Vector2(4632.33, -300.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud45" type="Sprite2D" parent="SKY"]
+position = Vector2(6470.67, -297)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud46" type="Sprite2D" parent="SKY"]
+position = Vector2(4168.67, -216.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud47" type="Sprite2D" parent="SKY"]
+position = Vector2(3975.33, -255.001)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud48" type="Sprite2D" parent="SKY"]
+position = Vector2(4402, -228.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud49" type="Sprite2D" parent="SKY"]
+position = Vector2(3793.67, -183.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud50" type="Sprite2D" parent="SKY"]
+position = Vector2(3680.33, -255.001)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud51" type="Sprite2D" parent="SKY"]
+position = Vector2(5120.67, -262)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud52" type="Sprite2D" parent="SKY"]
+position = Vector2(4927.33, -300.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud53" type="Sprite2D" parent="SKY"]
+position = Vector2(5354, -273.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud54" type="Sprite2D" parent="SKY"]
+position = Vector2(4745.67, -228.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud55" type="Sprite2D" parent="SKY"]
+position = Vector2(4632.33, -300.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud56" type="Sprite2D" parent="SKY"]
+position = Vector2(5582.33, -178.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud57" type="Sprite2D" parent="SKY"]
+position = Vector2(5469, -250.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud58" type="Sprite2D" parent="SKY"]
+position = Vector2(7307.33, -247)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud59" type="Sprite2D" parent="SKY"]
+position = Vector2(5005.33, -166.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud60" type="Sprite2D" parent="SKY"]
+position = Vector2(4812, -205.001)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud61" type="Sprite2D" parent="SKY"]
+position = Vector2(5238.67, -178.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud62" type="Sprite2D" parent="SKY"]
+position = Vector2(4630.33, -133.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud63" type="Sprite2D" parent="SKY"]
+position = Vector2(4517, -205.001)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud64" type="Sprite2D" parent="SKY"]
+position = Vector2(5957.33, -212)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="Cloud65" type="Sprite2D" parent="SKY"]
+position = Vector2(5764, -250.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 2
+
+[node name="Cloud66" type="Sprite2D" parent="SKY"]
+position = Vector2(6190.67, -223.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud67" type="Sprite2D" parent="SKY"]
+position = Vector2(5582.33, -178.667)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+frame = 1
+
+[node name="Cloud68" type="Sprite2D" parent="SKY"]
+position = Vector2(5469, -250.334)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ycy6u")
+vframes = 3
+
+[node name="MOUNTAIN" type="ParallaxLayer" parent="."]
+position = Vector2(0, 9.53674e-06)
+motion_scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(354, -17.7777)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(1056, -17.7777)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D3" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(1758, -17.7777)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D4" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(-1752, -18.2777)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D5" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(-1050, -18.2777)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D6" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(-348, -18.2777)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D7" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(4565, -14.7778)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D8" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(5267, -14.7778)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D9" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(5969, -14.7778)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D10" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(2460, -17.2777)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D11" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(3161, -15.2778)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="Sprite2D12" type="Sprite2D" parent="MOUNTAIN"]
+position = Vector2(3863, -15.2778)
+scale = Vector2(2.74219, 2.07031)
+texture = ExtResource("1_0qt1p")
+
+[node name="ColorRect" type="ColorRect" parent="MOUNTAIN"]
+offset_left = -2102.86
+offset_top = 112.857
+offset_right = 6321.14
+offset_bottom = 425.857
+color = Color(0.376471, 0.423529, 0.505882, 1)

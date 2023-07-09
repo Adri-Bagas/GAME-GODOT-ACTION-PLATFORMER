@@ -1,44 +1,43 @@
 extends CharacterBody2D
 
+# inventory and stats
 @export var WALK_SPEED : float = 150.0
 @export var RUN_SPEED : float = 300.0
 @export var JUMP_VELOCITY : float = -250.0
-
-# inventory and stats
 @export var health : float = 5
 @export var max_health : float = 5 
 var coins : float = 0
 var points : float = 0
 
+#state
 var is_running : bool = false
 var is_jumping : bool = false
 var animation_lock : bool = false
 var movement_lock : bool = false
 var is_looking_to_left : bool = false
-var direction : Vector2 = Vector2.ZERO
-
+var direction : Vector2 = Vector2.ZERO #(0, 0)
 var is_dead : bool = false
 var has_died : bool = false
 
+#prerequisite
 @onready var animatedSprite2d : AnimatedSprite2D = $AnimatedSprite2D
 @onready var attackArea1 : Area2D = $AttackArea1
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
-	
 	if not is_dead && not has_died:
 		if not is_on_floor():
 			velocity.y += gravity * delta
 		else:
 			is_jumping = false
 		if not movement_lock:
-			if Input.is_action_just_pressed("ui_accept"):
+			if Input.is_action_just_pressed("ui_accept"): #"ui_accept == spacebar"
 				if not is_jumping:
 					velocity.y = JUMP_VELOCITY
 					is_jumping = true
 			
-			direction = Input.get_vector("TRADLEFT", "TRADRIGHT", "TRADUP", "TRADDOWN")
+			direction = Input.get_vector("TRADLEFT", "TRADRIGHT", "TRADUP", "TRADDOWN") 
 			if direction:
 				if Input.is_action_just_pressed("SPRINT"):
 					velocity.x = direction.x * RUN_SPEED
